@@ -21,19 +21,18 @@ Una vez ejecutado el programa aparece el siguiente menu de opciones:
 1. Registrar departamento.
    Esta opción solicita el código del departamento, nombre, confirmación para agregar un puesto y si lo agrega se va a
    solicitar un código y el nombre del puesto. Cuando finalice se confirma que el departamento fue registrado.
-   ## EL CODIGO Y EL NOMBRE NO PUEDEN IR VACIOS. Tampoco permite registrar un departamento codigo que se repita ni puestos
-   ## duplicados en el mismo departamento. 
+   **EL CODIGO Y EL NOMBRE NO PUEDEN IR VACIOS. Tampoco permite registrar un departamento codigo que se repita ni puestos
+   duplicados en el mismo departamento.**
 3. Mostrar departamentos.
    Esta opción permite mostrar la información de los departamentos.
 5. Registrar empleado.
-   Esta opción permite registrar un empleado. Primero pregunta si es: médico, enfermero, administración. Al seleccionar alguna de esas opciones solicita como datos generales: nombre, cedula y código del empleado. Adicionalmente, si seleccionó médico pregunta por: especialidad, años de experiencia y turno de guardia. Si seleccionó enfermero: área asignada, confirmación de si está en guardia. Y si es administración: departamento y confirma si tiene un acceso financiero.
-   ## NO SE PUEDEN REPETIR CEDULAS REPETIDAD, CEDULAS O CODIGOS NUMERICOS MENORES O IGUAL A CERO, ASI COMO NOMBRES VACIOS O
-   ## AÑOS DE EXPERIENCIA NEGATIVOS.
+   Esta opción permite registrar un empleado. Primero pregunta si es: médico, enfermero, administración. Al seleccionar alguna de esas opciones solicita como datos generales: nombre, cedula y código del empleado.             Adicionalmente, si seleccionó médico pregunta por: especialidad, años de experiencia y turno de guardia. Si seleccionó enfermero: área asignada, confirmación de si está en guardia. Y si es administración: departamento     y confirma si tiene un acceso financiero.
+   **NO SE PUEDEN REPETIR CEDULAS REPETIDAD, CEDULAS O CODIGOS NUMERICOS MENORES O IGUAL A CERO, ASI COMO NOMBRES VACIOS O AÑOS DE EXPERIENCIA NEGATIVOS.**
 7. Mostrar empleados.
    Esta opción permite mostrar la información de los empleados.
 9. Generar un comprobante de pago.
-    Esta opción permite generar un comprobante de pago. Este solicita los siguientes datos: cedula del empleado, periodo de pago (ejemplo: noviembre 2026), código del departamento (vacío si no aplica), cantidad de horas trabajadas y monto de bono nocturno o de guarda (0 si no corresponde). Cuando termina se muestra el comprobante con los datos del pago y se guarda la información.
-   ## EL EMPLEADO DEBE EXISTIR, PERIODO NO PUEDE ESTAR VACIO Y NO SE PUEDEN CREAR DOS COMPROBANTES PARA UN MISMO EMPLEADO EN EL MISMO PERDIODO. SI SE ANOTA UN DEPARTAMENTE DEBE EXISTIR Y LAS HORAS EXTRA Y DE BONO NO PUEDE SER NEGATIVO.
+   Esta opción permite generar un comprobante de pago. Este solicita los siguientes datos: cedula del empleado, periodo de pago (ejemplo: noviembre 2026), código del departamento (vacío si no aplica), cantidad de horas       trabajadas y monto de bono nocturno o de guarda (0 si no corresponde). Cuando termina se muestra el comprobante con los datos del pago y se guarda la información.
+   **EL EMPLEADO DEBE EXISTIR, PERIODO NO PUEDE ESTAR VACIO Y NO SE PUEDEN CREAR DOS COMPROBANTES PARA UN MISMO EMPLEADO EN EL MISMO PERDIODO. SI SE ANOTA UN DEPARTAMENTE DEBE EXISTIR Y LAS HORAS EXTRA Y DE BONO NO PUEDE       SER NEGATIVO.**
 11. Mostrar todos los comprobantes de pago.
     Esta opción muestra todos los comprobantes de pago en el sistema.
 13. Mostrar comprobantes de un empleado.
