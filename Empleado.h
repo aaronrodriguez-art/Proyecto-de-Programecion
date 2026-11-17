@@ -13,18 +13,20 @@ public:
 	void setCedula(int cedula);
 	void setNombre(string nombre);
 	void setCodigo(int codigo);
-	void setCalcularSalario(double Salario);
 	
 	int getCedula();
 	string getNombre();
 	int getCodigo();
-	string toString();
+	virtual string toString();
 	
+	// metodos virtuales puros para que cada tipo de empleado calcule su propio salario
 	virtual double calcularSalario() = 0;
+	virtual double calcularSalarioBruto() = 0;
+	
+	double calcularDeducciones(double salarioBruto);
+	
 	virtual ~Empleado();
 	
-	void autoGuardar(ofstream&);
-	static Empleado* autoLeer(ifstream&);
 	
 protected:
 	int *cedula;
