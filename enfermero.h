@@ -15,8 +15,9 @@ public:
 	string getAreaAsignada();
 	bool getEstaGuardia();
 	
-	string toString() override;
-	double calcularSalario() override;
+	string toString();
+	double calcularSalario();
+	double calcularSalarioBruto();
 	
 private:
 	string *areaAsignada;
