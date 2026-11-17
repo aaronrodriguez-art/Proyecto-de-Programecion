@@ -5,7 +5,7 @@ Empleado::Empleado() {
 	this->cedula=new int();
 	this->nombre=new string();
 	this->codigo=new int();
-
+	
 }
 
 Empleado::Empleado(int cedula,string nombre,int codigo){
@@ -34,55 +34,37 @@ string Empleado::toString(){
 	return ss.str();
 	
 }
-void Empleado::autoGuardar(ofstream& estFile) {
-	cout << "    <<Guardando>>" << endl;
-	cout << toString() << endl;
-	estFile << cedula  << endl
-		<< nombre << endl
-		<< codigo << endl;
-}
-
-Empleado*  Empleado::autoLeer(ifstream& estFile) {
-	
-	string nombre;
-	int cedula,codigo; 
-	int tipoEmpleado;//saber cual clase asigna
-	
-	
-	if (!(estFile >> cedula)) { return NULL; }
-	if (!(estFile >> nombre)) { return NULL; }
-	if (!(estFile >> codigo)) { return NULL; }
-	
-	cout << "   --Cargando registro" << endl;
-	if (tipoEmpleado == 1) { // Es Médico
-		string especialidad;
-		int anosExperiencia;
-		string turnoGuardia;
-		
-		estFile >> especialidad >> anosExperiencia >> turnoGuardia;
-		
-		return new medico(cedula, nombre, codigo, especialidad, anosExperiencia, turnoGuardia);
-	} 
-	else if (tipoEmpleado == 2) { // Es Enfermero
-		string areaAsignada;
-		bool estaGuardia;
-		
-		estFile >> areaAsignada >> estaGuardia;
-		
-		return new enfermero(cedula, nombre, codigo, areaAsignada, estaGuardia);
-	} 
-	else {//es administracion
-		string departamento;
-		bool accesoFinanciero;
-		
-		estFile >> departamento >> accesoFinanciero;
-		
-		return new administracion(cedula, nombre, codigo, departamento, accesoFinanciero);
-	}
-}
-
 Empleado::~Empleado(){
 	delete cedula;
 	delete nombre;
 	delete codigo;
 }
+
+double Empleado::calcularDeducciones(double salarioBruto) {
+		
+		double ccss = salarioBruto * 0.1083;
+		double renta = 0;
+		
+		if (salarioBruto > 4727000) {
+			renta = (1347000 - 918000) * 0.10
+				+ (2364000 - 1347000) * 0.15
+				+ (4727000 - 2364000) * 0.20
+				+ (salarioBruto - 4727000) * 0.25;
+		}
+		else if (salarioBruto > 2364000) {
+			renta = (1347000 - 918000) * 0.10
+				+ (2364000 - 1347000) * 0.15
+				+ (salarioBruto - 2364000) * 0.20;
+		}
+		else if (salarioBruto > 1347000) {
+			renta = (1347000 - 918000) * 0.10
+				+ (salarioBruto - 1347000) * 0.15;
+		}
+		else if (salarioBruto > 918000) {
+			renta = (salarioBruto - 918000) * 0.10;
+		}
+		
+		return ccss + renta;
+	}
+	
+	
