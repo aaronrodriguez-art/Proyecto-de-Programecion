@@ -46,15 +46,17 @@ string medico::getTurnoGuardia() {
 	return *turnoGuardia;
 }
 
-double medico::calcularSalario() {
+double medico::calcularSalarioBruto() {
 	double salarioBase = 2500000.0;
 	double bonoExperiencia = (*anosExperiencia) * 50000.0;
-	double salarioBruto = salarioBase + bonoExperiencia;
+	return salarioBase + bonoExperiencia;
+}
+
+double medico::calcularSalario() {
+	double salarioBruto = calcularSalarioBruto();
+	double deducciones = calcularDeducciones(salarioBruto);
+	double salarioNeto = salarioBruto - deducciones;
 	
-	double deduccionSeguro = salarioBruto * 0.1067;
-	double deduccionImpuestos = salarioBruto * 0.05;
-	
-	double salarioNeto = salarioBruto - deduccionSeguro - deduccionImpuestos;
 	return salarioNeto;
 }
 
