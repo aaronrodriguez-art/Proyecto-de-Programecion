@@ -1,0 +1,39 @@
+PERSIST01
+Departamento Prueba
+1
+P01
+Medico General
+TEST12
+Cardiologia
+1
+P01
+Cardiologo
+TEST11
+Pediatria
+1
+P01
+Medico Pediatra
+TEST10
+Emergencias
+2
+P02
+Enfermero
+P01
+Medico General
+2070
+patata
+0
+2080
+Lindo
+0
+4422
+hola{
+0
+TEST01
+A
+0
+TEST04
+Emergencias
+1
+P01
+Medico General

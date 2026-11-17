@@ -1,0 +1,39 @@
+1
+98765
+Prueba Persistencia
+98765
+Medicina General
+2
+Nocturno
+2
+802569365
+a
+502
+p
+0
+3
+103
+Ana
+203
+Ventas
+0
+2
+102
+Maria
+202
+Pasillo
+1
+1
+101
+Carlos Mora
+201
+C
+2
+Nocturno
+1
+208550745
+Ariana
+8080
+Cardiologia
+5
+Diurno
