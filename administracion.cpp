@@ -33,15 +33,17 @@ bool administracion::getAccesoFinanciero() {
 	return *accesoFinanciero;
 }
 
-double administracion::calcularSalario() {
+double administracion::calcularSalarioBruto() {
 	double salarioBase = 900000.0;
 	double bonoAcceso = (*accesoFinanciero) ? 80000.0 : 0.0;
-	double salarioBruto = salarioBase + bonoAcceso;
+	return salarioBase + bonoAcceso;
+}
+
+double administracion::calcularSalario() {
+	double salarioBruto = calcularSalarioBruto();
+	double deducciones = calcularDeducciones(salarioBruto);
+	double salarioNeto = salarioBruto - deducciones;
 	
-	double deduccionSeguro = salarioBruto * 0.1067;
-	double deduccionImpuestos = salarioBruto * 0.01;
-	
-	double salarioNeto = salarioBruto - deduccionSeguro - deduccionImpuestos;
 	return salarioNeto;
 }
 
