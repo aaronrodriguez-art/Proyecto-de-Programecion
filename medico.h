@@ -16,8 +16,9 @@ public:
 	string getEspecialidad();
 	int getAnosExperiencia();
 	string getTurnoGuardia();
-	string toString() override;
-	double calcularSalario() override;
+	string toString();
+	double calcularSalario();
+	double calcularSalarioBruto();
 	
 private:
 	string *especialidad;
