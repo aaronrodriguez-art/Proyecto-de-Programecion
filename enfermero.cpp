@@ -34,17 +34,19 @@ bool enfermero::getEstaGuardia() {
 	return *estaGuardia;
 }
 
-double enfermero::calcularSalario() {
+double enfermero::calcularSalarioBruto() {
 	double salarioBase = 1200000.0;
 	double bonoGuardia = (*estaGuardia) ? 150000.0 : 0.0;
-	double salarioBruto = salarioBase + bonoGuardia;
-	
-	double deduccionSeguro = salarioBruto * 0.1067;
-	double deduccionImpuestos = salarioBruto * 0.02;
-	
-	double salarioNeto = salarioBruto - deduccionSeguro - deduccionImpuestos;
-	return salarioNeto;
+	return salarioBase + bonoGuardia;
 }
+
+double enfermero::calcularSalario() {
+		double salarioBruto = calcularSalarioBruto();
+		double deducciones = calcularDeducciones(salarioBruto);
+		double salarioNeto = salarioBruto - deducciones;
+		
+		return salarioNeto;
+	}
 
 string enfermero::toString() {
 	stringstream ss;
