@@ -15,8 +15,9 @@ public:
 	string getDepartamento();
 	bool getAccesoFinanciero();
 	
-	string toString() override;
-	double calcularSalario() override;
+	string toString();
+	double calcularSalario();
+	double calcularSalarioBruto();
 	
 private:
 	string *departamento;
