@@ -52,6 +52,34 @@ bool ListaEmpleado::eliminaInicio() {
 		return true;
 	}
 }
+void ListaEmpleado::insertarFinal(Empleado* e) {
+	NodoEmpleado* nuevo = new NodoEmpleado(e, NULL);
+	if (primero == NULL) {
+		primero = nuevo;
+	} else {
+		NodoEmpleado* aux = primero;
+		while (aux->getSig() != NULL) {
+			aux = aux->getSig();
+		}
+		aux->setSig(nuevo);
+	}
+}
+
+NodoEmpleado* ListaEmpleado::getPrimero() {
+	return primero;
+}
+
+Empleado* ListaEmpleado::buscarPorCedula(int cedula) {
+	NodoEmpleado* aux = primero;
+	while (aux != NULL) {
+		if (aux->getInfo()->getCedula() == cedula) {
+			return aux->getInfo();
+		}
+		aux = aux->getSig();
+	}
+	return NULL;
+}
+
 ListaEmpleado::~ListaEmpleado() {
 	while (!listaVacia())
 	{eliminaInicio(); }
