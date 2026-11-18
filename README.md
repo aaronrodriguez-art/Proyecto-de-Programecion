@@ -5,7 +5,7 @@
 ## Integrantes 
 Ariana Castro Garita - 208550745
 Keylor Mitchell Bejarano -
-Aaron Rodriguez Lozano -
+Aaron Rodriguez Lozano - 209100389
 
 ## Instrucciones de compilación
 1. Descargar el archivo .zip desde el respositorio.
