@@ -46,4 +46,18 @@ Al iniciar la aplicación se desplegará el menú principal con las siguientes o
 7. **Mostrar comprobantes de un empleado**  
    Solicita la cédula de un empleado y muestra únicamente su historial de comprobantes.
 
-8. **Total de la planilla por periodo**
+8. **Total de la planilla por periodo**  
+   Solicita un período de pago específico y calcula el monto neto total que debe cancelarse en ese lapso.
+
+9. **Eliminar comprobante**  
+   Borra un comprobante registrado ingresando su código. Si el código no existe, el sistema lo notificará en pantalla.
+
+10. **Guardar datos**  
+    Guarda manualmente la información actual de memoria hacia los archivos de texto.
+
+0. **Salir**  
+   Guarda los cambios automáticamente y cierra el programa.
+
+## Archivos de texto
+
+El sistema utiliza archivos `.txt` locales para mantener la persistencia de los datos entre ejecuciones (departamentos, empleados y comprobantes). Estos archivos se cargan automáticamente al iniciar el programa y se actualizan al guardar manualmente o al salir mediante la opción `0`.
